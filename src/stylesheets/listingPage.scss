@@ -16,8 +16,13 @@ body {
   color: #3A4155;
 }
 
-.product-cards-wrapper {
+.product-cards-wrapper,
+.http-error-wrapper {
     max-width: 102.4rem;
     margin: 0 auto;
     padding: 3rem 0;
+
+    h3 {
+        margin: 20px;
+    }
 }

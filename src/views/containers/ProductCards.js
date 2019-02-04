@@ -24,10 +24,10 @@ class ProductCards extends Component {
     }
 
     render() {
-        let cards = null; // Add a spinner...
+        let cards = null; // Add a loading spinner here...
         if (this.state.products.length) {            
             cards = (
-                <ul className="product-cards">
+                <ul className='product-cards'>
                     {this.state.products.map(product => 
                         <Card
                             key={product.title}
