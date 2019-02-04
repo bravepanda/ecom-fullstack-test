@@ -1,0 +1,22 @@
+@media only screen and (max-width: 600px) {
+    
+}
+
+.product-card {
+    display: inline-block;
+    width: 100%;
+    border: 1px solid #ccc;
+    text-align: left;
+
+    .product-card-img {
+        width: 100%;
+    }
+
+    .product-card-label {
+        display: inline-block;
+        background-color: red;
+        color: white;
+        padding: 20px;
+        text-transform: capitalize;
+    }
+}
