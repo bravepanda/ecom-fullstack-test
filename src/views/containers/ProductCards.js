@@ -3,7 +3,7 @@ import axios from 'axios';
 
 import Card from '../components/ProductCard/ProductCard';
 
-// import classes from 'ProductCards.module.css';
+import './productCards.scss';
 
 class ProductCards extends Component {
     constructor(props) {
@@ -25,12 +25,16 @@ class ProductCards extends Component {
 
     render() {
         let cards = null; // Add a spinner...
-        if (this.state.products.length) {
-            cards = this.state.products.map(product => (
-                <Card
-                    key={product.title}
-                    {...product} />
-            ));
+        if (this.state.products.length) {            
+            cards = (
+                <ul className="product-cards">
+                    {this.state.products.map(product => 
+                        <Card
+                            key={product.title}
+                            {...product} />
+                    )}
+                </ul>
+            );
         }
         return cards;
     }

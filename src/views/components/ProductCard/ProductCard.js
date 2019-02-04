@@ -4,8 +4,8 @@ import ProductCardPrice from './ProductCardPrice/ProductCardPrice';
 import './productCard.scss';
 
 const ProductCard = (props) => (
-    <div className='product-card'>
-        <img className='product-card-img' src={`/dist/${props.image.path}`} alt={props.image.alt} />
+    <li className='product-card'>
+        <img className='product-card-img' src={`/dist${props.image.path}`} alt={props.image.alt} />
         {props.productLabel ? <div className='product-card-label'>{props.productLabel}</div> : null}
         <ProductCardBody
             title={props.title}
@@ -14,8 +14,8 @@ const ProductCard = (props) => (
             priceLabel={props.priceLabel}
             currency={props.currency}
             price={props.price} />
-        <button >{props.cta}{props.ctaLink}</button>
-    </div>
+        <button className='product-card-cta'>{props.cta}</button>
+    </li>
 );
 
 export default ProductCard;

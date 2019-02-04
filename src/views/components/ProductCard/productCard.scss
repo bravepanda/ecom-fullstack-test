@@ -1,12 +1,8 @@
-@media only screen and (max-width: 600px) {
-    
-}
-
 .product-card {
-    display: inline-block;
+    border: 1px solid #cccccc;
+    margin-bottom: 2rem;
+    padding: 0 2rem 2rem;
     width: 100%;
-    border: 1px solid #ccc;
-    text-align: left;
 
     .product-card-img {
         width: 100%;
@@ -14,9 +10,36 @@
 
     .product-card-label {
         display: inline-block;
-        background-color: red;
+        background-color: #FF2D15;
         color: white;
-        padding: 20px;
-        text-transform: capitalize;
+        height: 4rem;
+        padding: 0 2rem;
+        margin-left: -2rem;
+        line-height: 4rem;
+    } 
+    
+    .product-card-cta {
+        display: block;
+        border: 0.7rem solid #00FF00;
+        background-color: white;
+        color: #3A4155;
+        width: 100%;
+        font-weight: bold;
+        font-size: 2rem;
+        line-height: 2.4;
+    } 
+}
+
+/* Medium screens */
+@media all and (min-width: 480px) {
+    .product-card {
+        width: 48.5%;
+    }
+}
+
+/* Large screens */
+@media all and (min-width: 768px) {
+    .product-card {
+        width: 32%;
     }
 }

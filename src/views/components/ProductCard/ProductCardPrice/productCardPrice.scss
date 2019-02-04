@@ -1,3 +1,13 @@
 .product-card-price {
-    padding: 20px;
+    margin-bottom: 2rem;
+
+    .price-label {
+        color: #6C6F8B;
+        margin-right: 1rem;
+    }
+
+    .currency, .price {
+        font-size: 2.4rem;
+        font-weight: bold;
+    }
 }

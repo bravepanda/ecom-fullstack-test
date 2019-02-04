@@ -5,7 +5,7 @@ import '../stylesheets/listingPage.scss';
 
 const HomePage = () => {
     return (
-        <main className='product-cards-container'>
+        <main className='product-cards-wrapper'>
             <ProductCards />
         </main>
     );

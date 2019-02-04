@@ -1,4 +1,23 @@
+// Basic reset
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 body {
-    background-color: #FFFFFF;
-    color: #888888;
+  font-family: sans-serif;
+  font-size: 1.6rem;
+  margin: 0;
+  background-color: #FFFFFF;
+  color: #3A4155;
+}
+
+.product-cards-wrapper {
+    max-width: 102.4rem;
+    margin: 0 auto;
+    padding: 3rem 0;
 }
