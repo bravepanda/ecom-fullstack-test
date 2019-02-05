@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
-import Card from '../components/ProductCard/ProductCard';
+import ProductCard from '../components/ProductCard/ProductCard';
 
 import './productCards.scss';
 
@@ -10,33 +10,58 @@ class ProductCards extends Component {
         super(props);
 
         this.state = {
-            products: []
+            loading: true,
+            products: [],
+            error: false
         };
+        
+        // For async tests
+        this.fetchProducts;
     }
 
     componentDidMount() {
-        axios.get('/api/products')
+        this.fetchProducts = axios.get('/api/products')
             .then(response => {
                 this.setState({
-                    products: response.data
+                    loading: false,
+                    products: response.data,
+                    error: false
                 });
+            })
+            .catch(error => {                
+                this.setState({
+                    loading: false,
+                    error: true
+                });
+                // Handle the error
+                console.log('[ERROR]', error.message);
             });
     }
 
     render() {
-        let cards = null; // Add a loading spinner here...
+        let cards = 'Loading...';
+
         if (this.state.products.length) {            
             cards = (
-                <ul className='product-cards'>
+                <ul>
                     {this.state.products.map(product => 
-                        <Card
+                        <ProductCard
                             key={product.title}
                             {...product} />
                     )}
                 </ul>
             );
         }
-        return cards;
+
+        if (this.state.error) {
+            cards = 'There has been an error.';
+        }
+
+        return (
+            <div className='product-cards'>
+                {cards}
+            </div>
+        );
     }
 }
 

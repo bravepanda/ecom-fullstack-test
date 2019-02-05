@@ -1,9 +1,11 @@
 .product-cards {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-  list-style: none;
-  margin: 0;
-  padding: 0 2rem;
-  height: 100%;
+    ul {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        list-style: none;
+        margin: 0;
+        padding: 0 2rem;
+        height: 100%;
+    }
 }
